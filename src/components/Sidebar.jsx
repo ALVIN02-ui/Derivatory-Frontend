@@ -46,7 +46,7 @@ const Sidebar = () => {
         className={`bg-slate-900 text-white text-3xl rounded-full absolute -right-3 top-9 border border-white cursor-pointer ${!open && "rotate-180"}`}
       />
 
-      <div className="mt-4 scrollable">
+      <div className="mt-4">
         <div>
           <TbLetterD
             className={` text-white mr-2 text-4xl rounded cursor-pointer block float-left duration-500 ${open ? "rotate-[360deg]": "mb-6"}`}
@@ -56,41 +56,32 @@ const Sidebar = () => {
         </div>
      
         <div className="mt-6">
-          <PerfectScrollbar direction="rtl">
-            {links.map((item) => (
-              <div key={item.title} className="mb-6">
-                <div className="text-gray-400 mb-2 uppercase">{item.title}</div>
-                {item.links.map((link) => (
-                  <NavLink
-                    to={`/${link.name}`}
-                    key={link.name}
-                    onClick={handleCloseSideBar}
-                    style={({ isActive }) => ({
-                      backgroundColor: isActive ? currentColor : "",
-                      ":hover": { backgroundColor: isActive ? currentColor : "" },
-                    })}
-                    className={open ? activeLink : normalLink}
-                  >
-                    <span className={`${!open && "items-center pl-1"}`}>{link.icon}</span>
-                    <span className={`capitalize text-white duration-300  ${!open && "hidden"}`}>{link.name}</span>
-                  </NavLink>
-                ))}
-              </div>
-            ))}
-          </PerfectScrollbar> 
+          {links.map((item) => (
+            <div key={item.title} className="mb-6">
+              <div className="text-gray-400 mb-2 uppercase">{item.title}</div>
+              {item.links.map((link) => (
+                <NavLink
+                  to={`/${link.name}`}
+                  key={link.name}
+                  onClick={handleCloseSideBar}
+                  style={({ isActive }) => ({
+                    backgroundColor: isActive ? currentColor : "",
+                    ":hover": { backgroundColor: isActive ? currentColor : "" },
+                  })}
+                  className={open ? activeLink : normalLink}
+                >
+                  <span className={`${!open && "items-center pl-1"}`}>{link.icon}</span>
+                  <span className={`capitalize text-white duration-300  ${!open && "hidden"}`}>{link.name}</span>
+                </NavLink>
+              ))}
+            </div>
+          ))}
         </div>    
       </div>
       <style>
         {`
-          .ps__rail-y {
-            right: 0 !important;
-            width: 0.2em !important;
-            background-color: #F5F5F5 !important;
-          }
           .ps__thumb-y {
-            width: 0.2em !important;
-            background-color: ${currentColor} !important;
-            border-radius: 10px !important;
+            background-color: ${currentColor} !important;          
           }
         `}
       </style>
