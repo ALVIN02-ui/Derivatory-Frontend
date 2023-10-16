@@ -4,7 +4,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 
 //Components
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar";
 //Components
 
 //Icons
@@ -63,7 +63,7 @@ function App() {
   return (
     <div className="h-screen bg-sidebar">
       <BrowserRouter>
-        <div className={`flex relative ${open ? "w-72" : "w-20"}`}>
+        <div className="flex relative">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
 
             <button
