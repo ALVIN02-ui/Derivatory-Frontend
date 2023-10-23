@@ -61,14 +61,18 @@ function App() {
   };
 
   return (
-    <div className="h-screen bg-sidebar">
+    <div 
+    className={
+      currentMode === "Dark" ? "dark bg-slate-900 h-screen" : "h-screen bg-slate-200"
+    }
+    >
       <BrowserRouter>
         <div className="flex relative">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
 
             <button
               type="button"
-              className="text-1xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
+              className={`text-1xl p-3 hover:drop-shadow-xl hover:bg-light-gray ${currentMode === "Dark" ? "dark text-white" : "text-gray-800"}`}
               style={{ background: currentColor, borderRadius: "50%" }}
               onClick={() => setThemeSettings(true)}
             >
@@ -77,7 +81,7 @@ function App() {
 
           </div>
 
-          <div className="fixed sidebar h-screen border-r border-slate-200">
+          <div className={`fixed sidebar h-screen border-r ${currentMode === "Dark" ? "dark border-slate-200" : "border-gray-800"}`}>
             <Sidebar />
           </div>
 
