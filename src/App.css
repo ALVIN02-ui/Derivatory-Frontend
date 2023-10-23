@@ -3,10 +3,11 @@
 }
 
 .scrollable::-webkit-scrollbar{
-    width: 4px;
+    width: 3px;
+    background-color: white;
 }
 
-.scrollable::-webkit-scrollbar{
-    background-color: #888;
+.scrollable::-webkit-scrollbar-thumb {
     border-radius: 4px;
-}
+    height: 10px;
+  }

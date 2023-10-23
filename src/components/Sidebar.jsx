@@ -77,6 +77,13 @@ const Sidebar = () => {
             ))}
           </div>    
         </div>
+        <style>
+          {`
+          .scrollable::-webkit-scrollbar-thumb {
+            background-color: ${currentColor} !important;
+          }
+        `}
+        </style>
       </div>
     </div>
   );
