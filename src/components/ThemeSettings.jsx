@@ -11,14 +11,14 @@ const ThemeSettings = () => {
 
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
-      <div className="float-right h-screen dark:text-gray-200 bg-slate-200 dark:bg-slate-900 w-400">
+      <div className={`float-right h-screen w-400 ${currentMode === 'Dark' ? 'dark bg-slate-900 text-white border-white': 'bg-slate-200 text-gray-800 border-slate-800'} border-l`}>
         <div className="flex justify-between items-center p-4 ml-4">
           <p className="font-semibold text-xl">Settings</p>
           <button
             type="button"
             onClick={() => setThemeSettings(false)}
-            style={{ color: "rgb(153, 171, 180)", borderRadius: "50%" }}
-            className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
+            style={{ borderRadius: "50%" }}
+            className={`text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray ${currentMode === 'Dark' ? 'dark  text-white': 'text-gray-800'}`}
           >
             <MdOutlineCancel />
           </button>

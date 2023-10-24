@@ -71,16 +71,16 @@ export const links = [
 
 export const themeColors = [
     {
-        name: 'blue-theme',
-        color: '#1A97F5',
+        name: 'red-theme',
+        color: '#FF1818',
     },
     {
         name: 'purple-theme',
         color: '#DF00FE',
     },
     {
-        name: 'red-theme',
-        color: '#FF1818',
+        name: 'blue-theme',
+        color: '#1A97F5',
     },
     {
         name: 'indigo-theme',
