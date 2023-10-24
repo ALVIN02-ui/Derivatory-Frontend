@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useStateContext } from "./contexts/ContextProvider";
 
 //Components
-import Navbar from "./components/Navbar";
+import Card from "./components/Card";
 import Sidebar from "./components/Sidebar";
 //Components
 
@@ -83,6 +83,10 @@ function App() {
 
           <div className={`fixed sidebar h-screen border-r ${currentMode === "Dark" ? "dark border-slate-200" : "border-gray-800"}`}>
             <Sidebar />
+          </div>
+
+          <div className="flex">
+            <Card />
           </div>
 
           <div>
