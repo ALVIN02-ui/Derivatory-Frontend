@@ -10,9 +10,9 @@ import "../App.css";
 
 function Dashboard() {
 
-  const { open, setOpen} = useStateContext();
+  const { open, currentMode} = useStateContext();
   return (
-    <div className={`${open ? "pl-72" : "pl-20"} h-screen w-screen bg-red-600 text-white`}>dashboard</div>
+    <div className={`${open ? "pl-72" : "pl-20"} ${currentMode === 'Dark' ? 'dark bg-slate-900 text-white': 'bg-slate-200 text-gray-800'} h-screen w-screen`}>dashboard</div>
   )
 }
 
