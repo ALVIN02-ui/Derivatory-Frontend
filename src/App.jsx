@@ -85,10 +85,6 @@ function App() {
             <Sidebar />
           </div>
 
-          <div className="flex">
-            <Card />
-          </div>
-
           <div>
             {themeSettings && <ThemeSettings />}
 
