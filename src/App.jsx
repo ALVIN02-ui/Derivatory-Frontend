@@ -109,8 +109,8 @@ function App() {
               {/* Tools */}
 
               {/* Other */}
-              <Route path="/about" element={<About />} />
-              <Route path="/help" element={<Help />} />
+              <Route path="/about derivatory" element={<About />} />
+              <Route path="/help center" element={<Help />} />
               <Route path="/login" element={<Login/>} />
               {/* Other */}
             </Routes>

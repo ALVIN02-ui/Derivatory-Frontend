@@ -1,8 +1,18 @@
 import React from 'react'
 
+//Context Provider
+import { useStateContext } from "../../contexts/ContextProvider";
+//Context Provider
+
+//CSS
+import "../../App.css";
+//CSS
+
 function Evenodd() {
+
+  const { open, currentMode} = useStateContext();
   return (
-    <div>evenodd</div>
+    <div className={`${open ? "pl-72" : "pl-20"} ${currentMode === 'Dark' ? 'dark bg-slate-900 text-white': 'bg-slate-200 text-gray-800'} h-screen w-screen`}>evenodd</div>
   )
 }
 
