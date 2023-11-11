@@ -10,7 +10,8 @@ export default {
         "dark":"#081A51",
         "whitish":"rgba(255,255,255,0.18)",
         "sidebar":"#161618",
-        "backgrao":"#181818"
+        "backgrao":"#181818",
+        "derivatory":"#FF1818"
 
       }
     },
