@@ -18,7 +18,7 @@ import "../App.css";
 const Sidebar = () => {
 
   const { open, setOpen, screenSize, themeSettings,
-    setThemeSettings, currentColor, currentMode } = useStateContext();
+    setThemeSettings, currentColor, currentMode, setLoginClicked, loginClicked } = useStateContext();
 
   const toggleSidebar = () => {
     setOpen(!open);
@@ -30,16 +30,23 @@ const Sidebar = () => {
     }
   };
 
+
+
   const activeLink =
     `flex items-center gap-5 ${open && "pl-4"} pt-3 pb-2.5 rounded-lg text-white text-md`;
     const normalLink =
     `flex items-center gap-5 ${open && "pl-4"} pt-3 pb-2.5 rounded-lg text-md text-gray-800 dark:text-gray-200`;
 
+    const handleLoginClick = () => {
+      // Add any login logic here
+      setLoginClicked(true);
+      // You might want to navigate to the login page here using react-router
+    };
+
+  
   return (
     <div
-      className={`h-screen flex flex-col relative ${currentMode === 'Dark' ? 'dark bg-slate-900': 'bg-slate-200'} pt-2 duration-300 ${
-        open ? "w-72" : "w-20"
-      }`}
+      className={`h-screen flex flex-col relative ${currentMode === 'Dark' ? 'dark bg-slate-900': 'bg-slate-200'} pt-2 duration-300 ${open ? "w-72" : "w-20"} ${loginClicked ? "hidden" : ""} `}
     >
       <BsArrowLeftShort
         onClick={toggleSidebar}

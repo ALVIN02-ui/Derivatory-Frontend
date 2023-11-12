@@ -60,6 +60,13 @@ function App() {
     setOpen(!open);
   };
 
+  const handleLoginClick = () => {
+    // Add any login logic here
+    setLoginClicked(true);
+    // Navigate to the login page
+    navigate("/login"); // Replace "/login" with the actual path of your login page
+  };
+
   return (
     <div 
     className={
@@ -81,7 +88,7 @@ function App() {
 
           </div>
 
-          <div className={`fixed sidebar h-screen border-r ${currentMode === "Dark" ? "dark border-slate-200" : "border-gray-800"}`}>
+          <div className={`fixed sidebar h-screen border-r ${currentMode === "Dark" ? "dark border-slate-200" : "border-gray-800"}'}`}>
             <Sidebar />
           </div>
 
