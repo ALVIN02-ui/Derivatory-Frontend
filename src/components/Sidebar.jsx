@@ -7,6 +7,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 //Icons
 import { BsArrowLeftShort } from "react-icons/bs";
 import { TbLetterD } from "react-icons/tb";
+import { BsRobot } from "react-icons/bs";
 import { AiFillDashboard } from "react-icons/ai";
 import { MdAccountCircle} from "react-icons/md";
 // Icons
@@ -46,16 +47,17 @@ const Sidebar = () => {
   
   return (
     <div
-      className={`h-screen flex flex-col relative ${currentMode === 'Dark' ? 'dark bg-slate-900': 'bg-slate-200'} pt-2 duration-300 ${open ? "w-72" : "w-20"} ${loginClicked ? "hidden" : ""} `}
+      className={`h-screen flex flex-col relative ${currentMode === 'Dark' ? 'dark bg-slate-900': 'bg-slate-200'} pt-2  duration-300 ${open ? "w-72" : "w-20"} ${loginClicked ? "hidden" : ""} `}
     >
       <BsArrowLeftShort
         onClick={toggleSidebar}
         className={`${currentMode === 'Dark' ? 'dark bg-slate-900 text-white border-white': 'bg-slate-200 text-gray-800 border-gray-800'} text-3xl rounded-full absolute -right-3 top-9 border cursor-pointer ${!open && "rotate-180"}`}
       />
+      
       <div className={`px-4 pt-3 pb-4 border-b ${currentMode === 'Dark' ? 'dark border-white': 'border-gray-800'}`}>
-        <TbLetterD
+        <BsRobot
           className={` ${currentMode === 'Dark' ? 'dark text-white': 'text-gray-800'} mr-2 text-4xl rounded cursor-pointer block float-left duration-500 ${open && "rotate-[360deg]"}`}
-          style={{ background: currentColor }}
+          style={{ background: 'transparent'}}
         />
         <h1 className={`${currentMode === 'Dark' ? 'dark text-white': 'text-gray-800'} origin-left font-medium text-2xl duration-300 ${!open && "hidden"}`}>Derivatory</h1>
       </div>

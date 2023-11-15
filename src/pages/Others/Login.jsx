@@ -8,6 +8,10 @@ import { useStateContext } from "../../contexts/ContextProvider";
 import '../../App.css';
 // CSS
 
+//Icons
+import { BsRobot } from "react-icons/bs";
+//Icons
+
 //Assets
 import user_icon from '../../assets/person.png'
 import email_icon from '../../assets/email.png'
@@ -20,47 +24,45 @@ const Login = () => {
 
 
   return (
-    <div className={`${open ? "pl-72" : "pl-20"} ${currentMode === 'Dark' ? 'dark bg-slate-900 text-white': 'bg-slate-200 text-gray-800'} h-screen w-screen flex flex-row`}>
+    <div className={`${open ? "pl-72" : "pl-20"} ${currentMode === 'Dark' ? 'dark bg-slate-900 text-white': 'bg-slate-200 text-gray-800'} h-screen w-screen flex`}>
 
-      <div className='bg-derivatory h-screen w-2/3 relative'>
-          <div className={`signup-container flex flex-col m-auto mt-20 w-2/5 border-2 border-derivatory  ${currentMode === 'Dark' ? 'dark bg-slate-900 text-white': 'bg-slate-200 text-gray-800'}`}>
+      <div className='h-screen w-2/3 flex'>  
+        <div className={`signup-container flex flex-col m-auto  ${currentMode === 'Dark' ? 'dark bg-slate-900 text-white': 'bg-slate-200 text-gray-800'}`}>
 
-            <div>
-              <div className={`px-4 pt-3 scroll-pb-1.5`}>
-                <h1 className={` origin-left font-medium text-2xl duration-300 text-derivatory`}>Derivatory</h1>
-              </div>
+          <div className='flex items-center justify-center pb-7'>
+            <BsRobot
+              className={` ${currentMode === 'Dark' ? 'dark text-white': 'text-gray-800'}  text-4xl rounded cursor-pointer`}
+              style={{ background: 'transparent'}}
+            />
+          </div>
+
+          <div className="inputs mt-2 flex flex-col gap-6">
+
+            <div className="input bg-slate-100">
+              <input type="text" placeholder='Username'/>
             </div>
 
-            <div className="inputs mt-2 flex flex-col gap-6 bg-green-300">
-
-              <div className="input">
-                <img src={user_icon} alt="" />
-                <input type="text" placeholder='Username'/>
-              </div>
-
-              <div className="input">
-                <img src={email_icon} alt=""/>
-                <input type="email" placeholder='Email' />
-              </div>
-
-              <div className="input">
-                <img src={password_icon} alt="" />
-                <input type="password" placeholder='Password'/>
-              </div>
-
+            <div className="input bg-slate-100">
+              <input type="password" placeholder='Password'/>
             </div>
 
-            <div className="forgot-password">Lost Password? <span>Click Here</span></div>
+          </div>
 
-            <div className="submit-container">
-              <div className="submit">Sign Up</div>
-            </div>
-          
+          <div className="member"><span>Forgot Password</span></div>
+
+          <div className="submit-container">
+            <div className="submit">Log In</div>
+          </div>
+
+          <div className="password">
+            Don't have an account? <span>Register</span>             
+          </div>
+        
         </div>
       </div>
 
-      <div className='bg-white h-screen w-1/3'>
-
+      <div className=' h-screen w-1/3 bg-derivatory'>
+        <span></span>
       </div>
 
 
