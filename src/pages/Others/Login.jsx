@@ -61,8 +61,15 @@ const Login = () => {
         </div>
       </div>
 
-      <div className=' h-screen w-1/3 bg-derivatory'>
-        <span></span>
+      <div className=' h-screen w-1/3 z-0 relative flex justify-center items-center border-l border-black'>
+        <div className="rounded-full p-7 border border-black glass">
+          <div className='flex items-center justify-center'>
+            <BsRobot
+              className={` ${currentMode === 'Dark' ? 'dark text-white': 'text-gray-800'}  text-7xl  cursor-pointer`}
+              style={{ background: 'transparent'}}
+            />
+          </div>
+        </div>
       </div>
 
 
